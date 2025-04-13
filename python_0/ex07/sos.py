@@ -47,7 +47,14 @@ def sos(string):
     Accepts a string as an argument.
     Returns the same string encoded in morse code.
     """
-    return string
+
+    res = ""
+    for char in string:
+        if char.upper() not in NESTED_MORSE:
+            raise AssertionError("the arguments are bad")
+        else:
+            res += NESTED_MORSE[char.upper()] + " "
+    return res[:-1]  # remove the last space
 
 
 def main():
