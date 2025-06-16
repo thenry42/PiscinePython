@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 
 def display_csv(path: str):
     """ doc """
-    doc = load(path)
+    df = load(path)
+
+    
 
     return
 
